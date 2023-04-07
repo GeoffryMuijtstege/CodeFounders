@@ -1,0 +1,93 @@
+/* Site layout */
+main, header, section, aside, footer
+{
+    margin: 0;
+    padding: 0.5rem;
+    border: 1px solid #000000;
+    color: #ffffff;
+}
+
+main {
+    background: #000000;
+}
+
+header {
+    background: #03a9f4;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.content
+{
+    background: green;
+    outline: 1px solid black;
+    flex-grow: 1;
+}
+
+aside {
+    border: 1px solid #000000;
+    background: #673ab7;
+}
+
+footer {
+    border: 1px solid #000000;
+    background: #616161;
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+
+aside{
+    flex: 0 1 300px;
+    flex-basis: 25%;
+}
+
+.wrapper
+{
+    margin: auto;
+    max-width: 100rem;
+}
+
+
+/*Content part of site */
+.album
+{
+    width: 6rem;
+    height: 6rem;
+}
+
+.album-cover
+{
+    padding: 1rem;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#album-title
+{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.font-headers
+{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#eminem
+{
+    display:flex;
+}
+
+@media screen and (min-width: 640px)
+{
+    .flex-container {
+        display: flex;
+        min-height: 100vh;
+    } 
+}
