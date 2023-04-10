@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 Eminem Albums</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>
+                Top songs
+            </h1>
+        </header>
+        <div class="flex-container wrapper">
+            <aside class="">
+                <a href="index.html">Introduction</a>
+                <h3>Top 40 of all time</h3>
+                <h3>Top 5</h3>
+                <section id="top-5">
+                <p>Top 5: J.Cole</p>
+                <p>Top 5: Eminem</p>
+                <p>Top 5: Logic</p>
+                <p>Top 5: NF</p>
+                </section>
+                <a href="opdrachten.html">Opdrachten</a>
+            </aside>
+            <section class="content">
+                <p>
+                    Op deze sectie van mijn site vind je de opdrachten van CodeFounders. Klik op een pictrogram om deze opdracht te openen.
+                </p>
+                <table id="eminem">
+                    <tr>
+                        <td class="font-headers">Assignment</td>
+                        <td id="album-title" class="font-headers">Show assignment</td>
+                    </tr>
+                    <tr>
+                        <td><p>Vriendelijke groeten</p></td>
+                        <td class="album-cover">
+                            <button onClick="hideAndShow()">
+                                <img src="/Code/pictures/vriendelijke groet.png"  class = "picture">
+                            </button>
+                        </td>
+                            <td>
+                                <div id="vriendelijkeGroet" class="opdracht">
+                                    <p>Typ hallo of doei en druk op de knop</p>
+                                    <input type="text" id="greetingField">
+                                    <button onclick="Greet()">Accept</button>
+                                </div>
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td><p>Zit er een e in?</p></td>
+                        <td class="album-cover">
+                            <button onClick="hideAndShow()">
+                                <img src="/Code/pictures/zitereenein.png" class = "picture">
+                            </button>
+                        </td>
+                            <td>
+                                <div id="zitErIn" class="opdracht">
+                                    <p>Typ een woord of zin en druk op de knop</p>
+                                    <input type="text" id="checkfore">
+                                    <button onclick="checkForE()">Accept</button>
+                                </div>
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td><p>Hoe vaak zit er een e in?</p></td>
+                        <td class="album-cover">
+                            <button onClick="hideAndShow()">
+                                <img src="/Code/pictures/meerderee.jpg" class = "picture">
+                            </button>
+                        </td>
+                            <td>
+                                <div id="hoeVaak" class="opdracht">
+                                    <p>Voer in het eerste veld een woord of zin in, en in het tweede veld een letter. Druk daarna op de knop.</p>
+                                    <input type="text" id="checkformultiple">
+                                    <input type="text" id="checkletter" maxlength="1">
+                                    <button onclick="checkForLetter()">Accept</button>
+                                </div>
+                            </td>
+                        </div>
+
+                    </tr>
+                    <tr>
+                        <td><p>Op welke knoppen is er eigenlijk geklikt?</p></td>
+                        <td class="album-cover">
+                            <button onClick="hideAndShow()">
+                            <img src="/Code/pictures/whichbutton.jpg" class = "picture">
+                            </button>
+                        </td>
+                            <td>
+                                <div id="welkeKnop" class="opdracht">
+                                    <p>Kies een knop!</p>
+                                    <button value="A" onclick="whatButton(this.value)">A</button>
+                                    <button value="B" onclick="whatButton(this.value)">B</button>
+                                    <button value="C" onclick="whatButton(this.value)">C</button>
+                                    <button value="D" onclick="whatButton(this.value)">D</button>
+                                </div>
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td><p>Op iedere knop mag maar 1 keer geklikt worden!</p></td>
+                        <td class="album-cover">
+                            <button onClick="hideAndShow()">
+                            <img src="/Code/pictures/only one time.webp" class = "picture">
+                            </button>
+                        </td>
+                            <td>
+                                <div id="eenKeerKlikken" class="opdracht">
+                                </div>
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td><p>Vier seizoenen, vier afbeeldingen!</p></td>
+                        <td class="album-cover">
+                            <button onClick="hideAndShow()">
+                            <img src="/Code/pictures/4seasons.jpg" class = "picture">
+                            </button>
+                        </td>
+                            <td>
+                                <div id="vierSeizoenen" class="opdracht">
+                                </div>
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td><p>Zijn de afbeeldingen hetzelfde?</p></td>
+                        <td class="album-cover">
+                            <button onClick="hideAndShow()">
+                            <img src="/Code/pictures/aretheythesame.jpg" class = "picture">
+                            </button>
+                        </td>
+                            <td>
+                                <div id="samePicture" class="opdracht">
+                                </div>
+                            </td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td><p>De Lente begint!</p></td>
+                        <td class="album-cover">
+                            <button onClick="hideAndShow()">
+                            <img src="/Code/pictures/springstarts.jpg" class = "picture">
+                            </button>
+                        </td>
+                            <td>
+                                <div id="lenteBegint" class="opdracht">
+                                </div>
+                            </td>
+                        </div>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        <footer>
+            <h4>©2020 - 2023 Geoffry Muijtstege</h4>
+        </footer>
+    </main>
+</body>
+<script src="myscript.js"></script>
+</html>
