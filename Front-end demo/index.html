@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Personen overzicht</h1>
+
+    <table id="persons-table"></table>
+
+    <input type="text" id="firstName">
+    <input type="text" id="lastName">
+    <input type="number" id="age">
+    <button type="button" onClick = "createPerson()">Submit</button>
+
+    <script>
+        function loadData()
+        {
+            fetch("http://localhost:8080/person/all")
+                .then(r => {
+                    return r.json();
+                })
+                .then(data => {
+                    fillTable(data);
+                })
+        }
+
+        function fillTable(data)
+        {
+            let tableHtml= '';
+
+            data.forEach(person => {
+                tableHtml += `
+                    <tr>
+                        <td>${person.firstName}</td>
+                        <td>${person.lastName}</td>
+                        <td>${person.age}</td>
+                        <td>${person.lovesProgramming}</td>
+                    </tr>
+                `
+            });
+
+            document.getElementById('persons-table').innerHTML = tableHtml;
+        }
+
+        loadData();
+
+        function createPerson() {
+        // Formulier uitlezen
+            let firstNameInvoer = document.getElementById('firstName').value;
+            let lastNameInvoer = document.getElementById('lastName').value;
+
+            let newPerson = {
+            firstName: firstNameInvoer,
+            lastName: lastNameInvoer
+            }
+
+            fetch("http://localhost:8080/person/aanmaken", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newPerson)
+            })
+            .then(response => {
+            alert('Is goedgegaan');
+            })
+            .catch(error => {
+            alert('Er is iets fouts gegaan');
+            });
+        }
+    </script>
+</body>
+</html>
